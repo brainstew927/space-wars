@@ -32,13 +32,21 @@ function exterminate(){
     }   
 }
 
-function force_gen(){
+function force_gen(varx,vary){
     random_y = Math.floor(Math.random()* (height - alien_size) + 1)
 
-    alien_temp = new alien(width, random_y, 90, alien_delta)
+    if(varx == null && vary == null){
+        alien_temp = new alien(width, random_y, 90, alien_delta);
+    }
+    else{
+        alien_temp = new alien(width, vary, 90, alien_delta);
+    }
 
     array_alieni.push(
         alien_temp
     )
 }
 
+function mouseClicked(){
+    force_gen(mouseX, mouseY);
+}
