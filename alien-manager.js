@@ -1,3 +1,5 @@
+let cont_alieni = 20;
+
 function generate_friends(){
    random_value = Math.floor(Math.random()*50)+1
    if(random_value == 32){
@@ -40,6 +42,7 @@ function force_gen(varx,vary){
     }
     else{
         alien_temp = new alien(width, vary, 90, alien_delta);
+        cont_alieni--;
     }
 
     array_alieni.push(
@@ -48,5 +51,6 @@ function force_gen(varx,vary){
 }
 
 function mouseClicked(){
+    if(cont_alieni >= 1)
     force_gen(mouseX, mouseY);
 }

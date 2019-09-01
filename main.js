@@ -34,7 +34,7 @@ function draw(){
     background(background_img)
 
     //genera gli alieni
-    generate_friends();
+    //generate_friends();
     //mostra la nave del player e le navi nemiche
     ship.draw();
     show_alien();
@@ -46,7 +46,14 @@ function draw(){
 
     exterminate();
 
-    console.log("collision:  " + collision)
+    fill(51)
+    rect(width/20, height/20, width/4, height/20)
+    fill(0)
+    textSize(20)
+    text("alieni spawnabili:  " + Math.round(cont_alieni), width/20 + width/70, height/20 + height/31)
+
+    if(cont_alieni < 20)    
+        cont_alieni += 0.02;
 }
 
 
@@ -61,6 +68,7 @@ function collision_checker(){
                 if(ship["y"] < nave_aliena["y"] + alien_size){
                     if(ship["y"] + ship["size"] > nave_aliena["y"]){
                         collision = true;
+                        log("hit!");
                     }
                 }
             }
