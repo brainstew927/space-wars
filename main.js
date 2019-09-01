@@ -16,10 +16,7 @@ let collision = false;
 function setup(){
     var cnv = createCanvas(windowWidth, windowHeight);
     
-
     ship = new spaceship(60,windowHeight/2 - 90/2, 90, 8);
-   // aliens = new alien(1000, 90, alien_size, 10);
-    force_gen();
     background_img = loadImage("img/bg.jpg")
 
 }
