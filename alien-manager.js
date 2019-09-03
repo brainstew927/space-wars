@@ -30,6 +30,8 @@ function exterminate(){
     if(array_alieni[0] != null){
         if (array_alieni[0]["x"] < -Math.abs(alien_size)){
             array_alieni.shift();
+
+            score++
         }
     }   
 }

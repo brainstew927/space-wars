@@ -11,6 +11,8 @@ let collision = false;
 
 let mode = null;
 
+let score = 0
+
 function setup(){
     var cnv = createCanvas(windowWidth, windowHeight);
     background_img = loadImage("img/bg.jpg")
@@ -52,6 +54,14 @@ function draw(){
         collision_checker();
 
         exterminate();
+
+        //visualizza punteggio
+        fill(51)
+        rect(width - width/10, height/20, width/4, height/20)
+        fill(0)
+        textSize(20)         
+        text("punteggio:  " + score, width - width/10 + 10, height/20 + height/31)
+
         if(mode == 2){
             fill(51)
             rect(width/20, height/20, width/4, height/20)
