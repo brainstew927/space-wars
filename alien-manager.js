@@ -51,6 +51,6 @@ function force_gen(varx,vary){
 }
 
 function mouseClicked(){
-    if(cont_alieni >= 1)
+    if(cont_alieni >= 1 && mode == 2)
     force_gen(mouseX, mouseY);
 }
