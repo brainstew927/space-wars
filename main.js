@@ -21,7 +21,6 @@ function setup(){
 }
 
 function draw(){
-    console.log("arrivato a loop");
     
 
 
@@ -31,16 +30,13 @@ function draw(){
             noLoop()
         }
 
-        console.log("ciao bro");
         
         clear();
         background(background_img)
 
         //genera gli alieni
         if(mode == 1){
-            generate_friends();
-            console.log("generata nave");
-            
+            generate_friends();            
         }
         //mostra la nave del player e le navi nemiche
         ship.draw();
@@ -57,7 +53,6 @@ function draw(){
             rect(width/20, height/20, width/4, height/20)
             fill(0)
             textSize(20)
-            console.log("stampato rect")            
             text("alieni spawnabili:  " + Math.round(cont_alieni), width/20 + width/70, height/20 + height/31)
         }
         if(cont_alieni < 20)    

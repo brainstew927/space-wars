@@ -3,7 +3,6 @@ let cont_alieni = 20;
 function generate_friends(){
    random_value = Math.floor(Math.random()*50)+1
    if(random_value == 32){
-        //console.log("Are we alone in the universe?");
 
         random_y = Math.floor(Math.random()* (height - alien_size) + 1)
 

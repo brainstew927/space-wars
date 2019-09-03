@@ -38,9 +38,6 @@ class spaceship {
     draw(){
 
         image(this.sprite, this.x, this.y, this.size, this.size)
-        if(this.debug){
-            console.log("drawed spaceship\n   x: " + this.x + "\n   y: " + this.y);
-            
-        }
+      
     }
 }
