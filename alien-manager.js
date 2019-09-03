@@ -1,3 +1,5 @@
+let cont_alieni = 20;
+
 function generate_friends(){
    random_value = Math.floor(Math.random()*50)+1
    if(random_value == 32){
@@ -32,13 +34,23 @@ function exterminate(){
     }   
 }
 
-function force_gen(){
+function force_gen(varx,vary){
     random_y = Math.floor(Math.random()* (height - alien_size) + 1)
 
-    alien_temp = new alien(width, random_y, 90, alien_delta)
+    if(varx == null && vary == null){
+        alien_temp = new alien(width, random_y, 90, alien_delta);
+    }
+    else{
+        alien_temp = new alien(width, vary, 90, alien_delta);
+        cont_alieni--;
+    }
 
     array_alieni.push(
         alien_temp
     )
 }
 
+function mouseClicked(){
+    if(cont_alieni >= 1 && mode == 2)
+    force_gen(mouseX, mouseY);
+}
